@@ -15,7 +15,7 @@ st.title("COVID-19 DATA STATISTICS")
 st.text("Based on COVID-19 Data Compiled by Oxford Martin School")
 st.sidebar.title("COVID-19 Data Visualization")
 
-imageurl = 'https://raw.githubusercontent.com/VinamraBharadwaj/COVID19WebApp/main/covidimage.jpg'
+imageurl = 'https://raw.githubusercontent.com/saranshraghav/covid_visuals/main/covidimage.jpg'
 img = ulr.urlopen(imageurl)
 
 image = Image.open(img)
@@ -27,7 +27,7 @@ st.markdown('<style>body{background-color: black;}</style>',unsafe_allow_html=Tr
 @st.cache()
 def long_running_function():
     return 1
-covid_df = pd.read_csv(r'https://raw.githubusercontent.com/VinamraBharadwaj/COVID19WebApp/main/covidmaster.csv')
+covid_df = pd.read_csv(r'https://raw.githubusercontent.com/saranshraghav/covid_visuals/main/covidmaster.csv')
 
 
 #Seperating World Data from compiled csv
@@ -226,4 +226,4 @@ st.sidebar.checkbox('GIF Animation - India', True, key =6)
 st.header("GIF Animation - India")
 
 if not st.checkbox('Hide Animation', False, key = 6):
-    st.markdown("![Alt Text](https://raw.githubusercontent.com/VinamraBharadwaj/COVID19WebApp/main/COVID_India.gif)")
+    st.markdown("![Alt Text](https://raw.githubusercontent.com/saranshraghav/covid_visuals/main/COVID_India.gif)")
